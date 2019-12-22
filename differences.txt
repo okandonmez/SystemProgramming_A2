@@ -1,0 +1,26 @@
+This file contains the my changes in the project.
+
+1) Firstly i added my system call in that file:
+	
+	- .../include/linux/syscalls.h 
+
+as like "asmlinkage long set_nice_inc(pid_t pid, int value);"
+
+2) And then, in that file:
+
+	- .../include/linux/sched.h
+
+i added this line: "int nice_inc".
+
+3) After that, this line:  ".nice_inc =0, \" added to that line:
+
+	- .../include/linux/init_task.h
+
+4) (not)Lastly edited that file :
+
+	- .../arch/x86/syscalls/syscall_32.tbl 
+
+as like: "355 	i386	set_nice_inc		set_nice_inc"
+
+
+5) in fork.c file i added some codeblocks in 1689th line.
